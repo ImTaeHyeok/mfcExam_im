@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D933FC69-93B4-4E34-9F38-B3B371528DD7}|mfcCImage\\mfcCImage.vcxproj|C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImageDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D933FC69-93B4-4E34-9F38-B3B371528DD7}|mfcCImage\\mfcCImage.vcxproj|solutionrelative:mfcCImage\\mfcCImageDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933FC69-93B4-4E34-9F38-B3B371528DD7}|mfcCImage\\mfcCImage.vcxproj|C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImage.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       % \u0086 2$  \u0022     ",
+      "RelativeMoniker": "D:0:0:{D933FC69-93B4-4E34-9F38-B3B371528DD7}|mfcCImage\\mfcCImage.vcxproj|solutionrelative:mfcCImage\\mfcCImage.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       % \u0086 2$  \u0022     "
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933FC69-93B4-4E34-9F38-B3B371528DD7}|mfcCImage\\mfcCImage.vcxproj|C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImageDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D933FC69-93B4-4E34-9F38-B3B371528DD7}|mfcCImage\\mfcCImage.vcxproj|solutionrelative:mfcCImage\\mfcCImageDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "mfcCImageDlg.h",
+              "DocumentMoniker": "C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImageDlg.h",
+              "RelativeDocumentMoniker": "mfcCImage\\mfcCImageDlg.h",
+              "ToolTip": "C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImageDlg.h",
+              "RelativeToolTip": "mfcCImage\\mfcCImageDlg.h",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADEAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-15T08:55:41.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mfcCImageDlg.cpp",
+              "DocumentMoniker": "C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImageDlg.cpp",
+              "RelativeDocumentMoniker": "mfcCImage\\mfcCImageDlg.cpp",
+              "ToolTip": "C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImageDlg.cpp",
+              "RelativeToolTip": "mfcCImage\\mfcCImageDlg.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-14T15:53:28.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "mfcCImage.rc - IDD_MFCCIMAGE_DIALOG - Dialog",
+              "DocumentMoniker": "C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Github_Upload\\mfcExam_im\\mfcCImage\\mfcCImage\\mfcCImage.rc",
+              "RelativeDocumentMoniker": "mfcCImage\\mfcCImage.rc",
+              "ToolTip": "C:\\Users\\xlvks\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uACFC\uC81C\\0619_1235\\mfcCImage\\mfcCImage\\mfcCImage.rc - IDD_MFCCIMAGE_DIALOG - Dialog",
+              "RelativeToolTip": "..\\..\\..\\\uACFC\uC81C\\0619_1235\\mfcCImage\\mfcCImage\\mfcCImage.rc - IDD_MFCCIMAGE_DIALOG - Dialog",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-14T15:53:06.305Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
