@@ -40,7 +40,7 @@ CAboutDlg::CAboutDlg() : CDialogEx(IDD_ABOUTBOX)
 
 void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 {
-	CDialogEx::DoDataExchange(pDX);
+	CDialogEx::DoDataExchange(pDX); //기본 데이터 교환 호출
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
@@ -66,7 +66,7 @@ void CmfcCImageDlg::DoDataExchange(CDataExchange* pDX)
 	//ID인 IDC_EDIT_X1 값을 변수 m_x1으로 저장
 	//UpdateData(TRUE)호출하면 입력된 값이 변수로 저장
 	// ** (FALSE) 호출하면 변수의 값이 입력 창으로 반영
-	DDX_Text(pDX, IDC_EDIT_X1, m_x1);
+	DDX_Text(pDX, IDC_EDIT_X1, m_x1); //해당 ID의 입력창과 변수 m_x1을 동기화
 	DDX_Text(pDX, IDC_EDIT_Y1, m_y1);
 	DDX_Text(pDX, IDC_EDIT_X2, m_x2);
 	DDX_Text(pDX, IDC_EDIT_Y2, m_y2);
@@ -89,7 +89,7 @@ END_MESSAGE_MAP()
 
 BOOL CmfcCImageDlg::OnInitDialog()
 {
-	CDialogEx::OnInitDialog();
+	CDialogEx::OnInitDialog(); //기본 대화 상자 초기화
 
 	// 시스템 메뉴에 "정보..." 메뉴 항목을 추가합니다.
 
@@ -97,14 +97,14 @@ BOOL CmfcCImageDlg::OnInitDialog()
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
-	CMenu* pSysMenu = GetSystemMenu(FALSE);
+	CMenu* pSysMenu = GetSystemMenu(FALSE); //시스템 메뉴 포인터 가져오기
 	if (pSysMenu != nullptr)
 	{
 		BOOL bNameValid;
 		CString strAboutMenu;
 		bNameValid = strAboutMenu.LoadString(IDS_ABOUTBOX);
-		ASSERT(bNameValid);
-		if (!strAboutMenu.IsEmpty())
+		ASSERT(bNameValid); //문자열 로드 성공 확인
+		if (!strAboutMenu.IsEmpty()) //문자열이 비어있지 ㅇ낳은지 확인
 		{
 			pSysMenu->AppendMenu(MF_SEPARATOR);
 			pSysMenu->AppendMenu(MF_STRING, IDM_ABOUTBOX, strAboutMenu);
@@ -148,7 +148,7 @@ void CmfcCImageDlg::OnSysCommand(UINT nID, LPARAM lParam)
 
 void CmfcCImageDlg::OnPaint()
 {
-	if (IsIconic())
+	if (IsIconic()) //창이 최소화되어 있는지 확인
 	{
 		CPaintDC dc(this); // 그리기를 위한 디바이스 컨텍스트입니다.
 
@@ -229,11 +229,11 @@ void CmfcCImageDlg::OnBnClickedBtnSave()
 void CmfcCImageDlg::OnBnClickedBtnLoad()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	if (m_image != NULL)
+	if (m_image != NULL) // ! -> 반전 / NULL -> 없다
 	{
-		m_image.Destroy();
+		m_image.Destroy(); //기존의 이미지를 삭제
 	}
-	m_image.Load(g_strFileImage);
+	m_image.Load(g_strFileImage); // 파일에서 이미지 로드
 
 	UpdateDisplay();
 }
@@ -247,8 +247,8 @@ void CmfcCImageDlg::UpdateDisplay()
 //사각형 움직이는 함수
 void CmfcCImageDlg::moveRect()
 {
-	static int nSttX = 0;
-	static int nSttY = 0;
+	static int nSttX = 0; 
+	static int nSttY = 0; 
 	int nGray = 80;
 	int nWidth = m_image.GetWidth();
 	int nHeight = m_image.GetHeight();
@@ -307,11 +307,12 @@ void CmfcCImageDlg::OnBnClickedBtnActtion()
 //사각형이 범위 밖으로 나가도 되게하는것
 BOOL CmfcCImageDlg::validImgPos(int x, int y)
 {
+	//이미지의 너비와 높이를 가져옴!
 	int nWidth = m_image.GetWidth();
 	int nHeight = m_image.GetHeight();
-	CRect rect(0, 0, nWidth, nHeight);
+	CRect rect(0, 0, nWidth, nHeight); //이미지의 범위를 정의하는 사각형 생성!
 
-	return rect.PtInRect(CPoint(x, y));
+	return rect.PtInRect(CPoint(x, y)); //주어진 좌표가 사각형 범위 내에 있는지 확인!
 }
 
 
@@ -320,7 +321,7 @@ void CmfcCImageDlg::drawCircle(unsigned char* fm, int x, int y, int nRadius, int
 {
 	int nCenterX = x + nRadius;
 	int nCenterY = y + nRadius;
-	int nPitch = m_image.GetPitch();
+	int nPitch = m_image.GetPitch();//이미지의 피치를 가져옴
 
 	for (int j = y; j < y + nRadius * 2; j++)
 	{
@@ -334,8 +335,9 @@ void CmfcCImageDlg::drawCircle(unsigned char* fm, int x, int y, int nRadius, int
 
 bool CmfcCImageDlg::isInCircle(int i, int j, int nCenterX, int nCenterY, int nRadius)
 {
-	bool bRet = false;
+	bool bRet = false; //초기 반환 값을 false로 설정
 
+	//원의 중심으로부터의 거리 제곱을 계산
 	double dX = i - nCenterX;
 	double dY = j - nCenterY;
 	double dDist = dX * dX + dY * dY;
@@ -345,7 +347,7 @@ bool CmfcCImageDlg::isInCircle(int i, int j, int nCenterX, int nCenterY, int nRa
 		bRet = true;
 	}
 
-	return bRet;
+	return bRet; // 결과를 반환
 }
 
 //이미지 목록
@@ -364,15 +366,17 @@ void CmfcCImageDlg::LoadImageAndDisplayCoords(CString filePath)
 {
 	if (m_image != NULL)
 	{
-		m_image.Destroy(); //기존 이미지 제거!
+		m_image.Destroy(); //기존 이미지가 있으면 제거!
 	}
 	m_image.Load(filePath); //새 이미지 로드!
 
+	//높이, 너비, 피치를 가져옴
 	int nWidth = m_image.GetWidth();
 	int nHeight = m_image.GetHeight();
 	int nPitch = m_image.GetPitch();
-	unsigned char* fm = (unsigned char*)m_image.GetBits();
+	unsigned char* fm = (unsigned char*)m_image.GetBits(); //이미지의 비트 배열을 가져옴
 
+	//원의 반지름과 중심 좌포를 초기화!
 	int nRadius = 20;
 	int xCenter = 0, yCenter = 0;
 	bool found = false;
@@ -406,19 +410,22 @@ void CmfcCImageDlg::LoadImageAndDisplayCoords(CString filePath)
 	// X표시하기
 	DrawXOnImage(fm, xCenter+nRadius, yCenter+nRadius);
 
-	UpdateDisplay();
+	UpdateDisplay(); //디플!
 }
 
+//원의 중심 좌표에 X표시를 그리는 함수!
 void CmfcCImageDlg::DrawXOnImage(unsigned char* fm, int x, int y)
 {
-	int nPitch = m_image.GetPitch();
-	int size = 20; // X 크기의 절반
+	int nPitch = m_image.GetPitch(); //이미지 피치를 가져오고
+	int size = 20; // X 크기 설정
 
 	// 좌상단에서 우하단 방향의 대각선 X 그리기
 	for (int i = -size; i <= size; i++)
 	{
 		int posX1 = x + i;
 		int posY1 = y + i;
+		//현재 좌표가 이미지 범위 내에 있는지 확인
+		//확인되면 그레이 값을 설정
 		if (validImgPos(posX1, posY1))
 			fm[posY1 * nPitch + posX1] = 255;
 	}
